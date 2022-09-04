@@ -28,3 +28,11 @@ paths.
 ```
 $ cat example.json | jk | fzf --preview "jq {} example.json"
 ```
+
+## Development
+
+Run tests.
+
+```
+$ deno test --allow-read --allow-run
+```
