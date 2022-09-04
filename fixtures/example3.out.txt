@@ -1,0 +1,14 @@
+.menu
+.menu.id
+.menu.value
+.menu.popup
+.menu.popup.menuitem
+.menu.popup.menuitem[0]
+.menu.popup.menuitem[0].value
+.menu.popup.menuitem[0].onclick
+.menu.popup.menuitem[1]
+.menu.popup.menuitem[1].value
+.menu.popup.menuitem[1].onclick
+.menu.popup.menuitem[2]
+.menu.popup.menuitem[2].value
+.menu.popup.menuitem[2].onclick

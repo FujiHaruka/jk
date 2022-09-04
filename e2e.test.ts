@@ -4,6 +4,11 @@ import { assertEquals } from "https://deno.land/std@0.154.0/testing/asserts.ts";
 const examples: { name: string; json: string; output: string }[] = [
   "example1",
   "example2",
+  "example3",
+  "example4",
+  "example5",
+  "example6",
+  "example7",
 ].map((name) => {
   const json = Deno.readTextFileSync(`fixtures/${name}.json`);
   const output = Deno.readTextFileSync(`fixtures/${name}.out.txt`);
@@ -15,7 +20,7 @@ const examples: { name: string; json: string; output: string }[] = [
 });
 
 examples.forEach((example) => {
-  Deno.test(`e2e - command result with ${example.name}.json should be queal to ${example.name}.out.txt`, async () => {
+  Deno.test(`Command result with ${example.name}.json should be queal to ${example.name}.out.txt`, async () => {
     const proc = Deno.run({
       cmd: ["deno", "run", "cli.ts"],
       stdin: "piped",
