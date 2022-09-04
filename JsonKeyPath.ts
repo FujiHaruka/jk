@@ -62,16 +62,15 @@ export class JsonKeyPath {
 
   // convert into a dot path
   toString(): string {
-    return "." +
-      this.keys.map((key) => {
-        switch (typeof key) {
-          case "string":
-            return shouldEscape(key) ? `"${key}"` : key;
-          case "number":
-            return `[${key}]`;
-          default:
-            throw new Error(`Invalid key type: ${typeof key}`);
-        }
-      }).join(".");
+    return this.keys.map((key, index) => {
+      switch (typeof key) {
+        case "string":
+          return shouldEscape(key) ? `."${key}"` : `.${key}`;
+        case "number":
+          return `${index === 0 ? "." : ""}[${key}]`;
+        default:
+          throw new Error(`Invalid key type: ${typeof key}`);
+      }
+    }).join("");
   }
 }

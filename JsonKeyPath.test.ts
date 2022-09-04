@@ -2,10 +2,13 @@ import { assertEquals } from "https://deno.land/std@0.154.0/testing/asserts.ts";
 import { calcRecursiveKeyPaths, Json, JsonKeyPath } from "./JsonKeyPath.ts";
 
 Deno.test("JsonKeyPath#toString", () => {
-  const tests: ([string[], string])[] = [
+  const tests: ([(string | number)[], string])[] = [
     [["key"], ".key"],
     [["key.key"], '."key.key"'],
     [["key1", "key2"], ".key1.key2"],
+    [[0], ".[0]"],
+    [[0, 1, 2], ".[0][1][2]"],
+    [[0, "foo", 1, "bar", 2], ".[0].foo[1].bar[2]"],
   ];
 
   tests.forEach(([keys, dotPath]) => {
@@ -64,8 +67,8 @@ Deno.test("calcRecursiveKeyPaths", () => {
         ".[1].foo",
         ".[1].foo.bar",
         ".[2]",
-        ".[2].[0]",
-        ".[2].[1]",
+        ".[2][0]",
+        ".[2][1]",
       ],
     ],
   ];
