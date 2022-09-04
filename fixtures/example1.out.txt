@@ -1,0 +1,17 @@
+.glossary
+.glossary.title
+.glossary.GlossDiv
+.glossary.GlossDiv.title
+.glossary.GlossDiv.GlossList
+.glossary.GlossDiv.GlossList.GlossEntry
+.glossary.GlossDiv.GlossList.GlossEntry.ID
+.glossary.GlossDiv.GlossList.GlossEntry.SortAs
+.glossary.GlossDiv.GlossList.GlossEntry.GlossTerm
+.glossary.GlossDiv.GlossList.GlossEntry.Acronym
+.glossary.GlossDiv.GlossList.GlossEntry.Abbrev
+.glossary.GlossDiv.GlossList.GlossEntry.GlossDef
+.glossary.GlossDiv.GlossList.GlossEntry.GlossDef.para
+.glossary.GlossDiv.GlossList.GlossEntry.GlossDef.GlossSeeAlso
+.glossary.GlossDiv.GlossList.GlossEntry.GlossDef.GlossSeeAlso[0]
+.glossary.GlossDiv.GlossList.GlossEntry.GlossDef.GlossSeeAlso[1]
+.glossary.GlossDiv.GlossList.GlossEntry.GlossSee
